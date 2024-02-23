@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
@@ -22,7 +22,8 @@ const EmblaCarousel = (props) => {
                   fill="true"
                   layout="fill"
                   objectFit="cover"
-                  aspectRatio={16 / 9}
+                  placeholder="blur"
+                  blurDataURL={`${index}`}
                 />
               </div>
             </div>
