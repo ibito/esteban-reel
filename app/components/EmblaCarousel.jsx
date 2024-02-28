@@ -56,14 +56,6 @@ const EmblaCarousel = (props) => {
     }
   };
 
- const toggleFullscreen = () => {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
-
   return (
     <section className="embla" id="gallery">
       <div className="embla__viewport" ref={emblaRef}>
@@ -88,7 +80,6 @@ const EmblaCarousel = (props) => {
                     objectFit="cover"
                     placeholder="blur"
                     blurDataURL={`${index}`}
-                    onClick={toggleFullscreen()}
                   />
                 </div>
               </div>
